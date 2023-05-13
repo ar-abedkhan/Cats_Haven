@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.DetailsFragment">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@color/white_background"
+            android:id="@+id/appbar"
+            >
+
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:title="Story Name"
+                android:textAlignment="viewStart"
+                android:tooltipText="by abed and Zeshan "
+                app:collapsedTitleTextColor="@color/black"
+                app:expandedTitleTextColor="@color/sky"
+                >
+                <!--                    app:contentScrim="@color/bottommenu_background"-->
+
+
+                <ImageView
+                    android:id="@+id/postImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_220sdp"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/catimg2"
+                    />
+
+
+                <!--                    <androidx.appcompat.widget.Toolbar-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="@dimen/_45sdp"-->
+                <!--                        android:id="@+id/toolbar"-->
+                <!--                        />-->
+
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+                <TextView
+                    android:id="@+id/storyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minHeight="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="Writers link post title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp"
+                    android:textStyle="bold"
+
+                    />
+
+
+
+
+
+
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:text="the srtory will herertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will heherertory will herertoryry will herertoryry will herertoryry will herertoryry will herertoryry will herertoryry will herertoryry will herertory will herertory will herertory will herertory will herertory will herertory will herertory will herertory will herertory will herertory will herertory will herertory will herertory will herertory will here"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:id="@+id/mainStory"
+                    />
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="Suggested :"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mainStory"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:id="@+id/comment_title"
+                    />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/famBdRecycler"
+                    app:layout_constraintTop_toBottomOf="@id/comment_title"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/cetagory_design"
+                    />
+
+
+
+
+                <!--comment layout......-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</FrameLayout>
