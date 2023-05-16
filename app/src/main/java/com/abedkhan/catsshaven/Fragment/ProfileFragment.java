@@ -9,38 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.abedkhan.catsshaven.R;
-import com.abedkhan.catsshaven.databinding.FragmentSearchBinding;
 
-public class SettingsFragment extends Fragment {
 
-    public SettingsFragment() {
+public class ProfileFragment extends Fragment {
+
+    public ProfileFragment() {
         // Required empty public constructor
     }
-FragmentSearchBinding binding;
-
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       binding=FragmentSearchBinding.inflate(getLayoutInflater(),container,false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        return binding.getRoot();
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 }

@@ -16,10 +16,17 @@
         android:color="@color/black"
         />
 
+<!--    <item-->
+<!--        android:id="@+id/settings"-->
+<!--        android:icon="@drawable/ic_baseline_settings_24"-->
+<!--        android:title="Settings"-->
+<!--        android:color="@color/black"-->
+<!--        />-->
+
     <item
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Settings"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile"
         android:color="@color/black"
         />
 

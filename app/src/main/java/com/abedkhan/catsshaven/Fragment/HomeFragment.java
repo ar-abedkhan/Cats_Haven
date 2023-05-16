@@ -1,23 +1,28 @@
 package com.abedkhan.catsshaven.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.abedkhan.catsshaven.Adapters.CatAdapter;
 import com.abedkhan.catsshaven.Adapters.CetagoryAdapter;
+import com.abedkhan.catsshaven.ContenerActivity;
 import com.abedkhan.catsshaven.Models.CatModel;
 import com.abedkhan.catsshaven.Models.CetagoryModels;
 import com.abedkhan.catsshaven.R;
 import com.abedkhan.catsshaven.databinding.FragmentHomeBinding;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +30,7 @@ import java.util.List;
 import io.ak1.BubbleTabBar;
 import io.ak1.OnBubbleClickListener;
 import me.ibrahimsn.lib.OnItemSelectedListener;
+import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class HomeFragment extends Fragment {
     public HomeFragment() {
@@ -32,8 +38,8 @@ public class HomeFragment extends Fragment {
     }
 FragmentHomeBinding binding;
     ArrayList<SlideModel> imageList;
-List<CatModel>catModels=new ArrayList<>();
-List<CetagoryModels>cetagoryModelsList=new ArrayList<>();
+    List<CatModel> catModels=new ArrayList<>();
+    List<CetagoryModels>cetagoryModelsList=new ArrayList<>();
 
 
 
@@ -44,62 +50,10 @@ List<CetagoryModels>cetagoryModelsList=new ArrayList<>();
     binding=FragmentHomeBinding.inflate(getLayoutInflater(),container,false);
 
 
-binding.bottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
-    @Override
-    public boolean onItemSelect(int i) {
 
 
 
 
-            switch (i) {
-                case 0:
-                    getChildFragmentManager().beginTransaction().replace(R.id.frame, new HomeFragment()).commit();
-                    Log.i("tag", "clicked: " + 0);
-                    break;
-
-                case 1:
-                    getChildFragmentManager().beginTransaction().replace(R.id.frame, new FavouriteFragment()).commit();
-                    Log.i("tag", "clicked: " + 1);
-
-                    break;
-
-                case 2:
-                    getChildFragmentManager().beginTransaction().replace(R.id.frame, new SettingsFragment()).commit();
-                    Log.i("tag", "clicked: " + 2);
-
-                    break;
-
-
-            }
-
-        return false;
-    }
-});
-
-
-//     binding.bubbleTabBar.addBubbleListener(i -> {
-//
-//            switch (i){
-//                case 0:
-//                    getChildFragmentManager().beginTransaction().replace(R.id.frame,new HomeFragment()).commit();
-//                    Log.i("tag", "clicked: "+0);
-//                    break;
-//
-//                case 1:
-//                    getChildFragmentManager().beginTransaction().replace(R.id.frame,new FavouriteFragment()).commit();
-//                    Log.i("tag", "clicked: "+1);
-//
-//                    break;
-//
-//                case 2:
-//                    getChildFragmentManager().beginTransaction().replace(R.id.frame,new SettingsFragment()).commit();
-//                    Log.i("tag", "clicked: "+2);
-//
-//                    break;
-//
-//            }
-//
-//        });
 
 
 
@@ -108,11 +62,11 @@ binding.bottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
 
         onClickSetup();
 
-sliderSetup();
+        sliderSetup();
 
-allBreedsRecycler();
+        allBreedsRecycler();
 
-cetagoryRecycler();
+        cetagoryRecycler();
 
 
 
@@ -139,14 +93,17 @@ cetagoryRecycler();
 
         binding.search.setOnClickListener(view -> {
 
+            Intent intent=new Intent(getContext(), ContenerActivity.class);
+            intent.putExtra("search",true);
+            getContext().startActivity(intent);
 
-            AppCompatActivity appCompatActivity= (AppCompatActivity) view.getContext();
-            SearchFragment fragment=new SearchFragment();
-            Bundle bundle=new Bundle();
-            fragment.setArguments(bundle);
-
-
-            appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame,fragment).addToBackStack(null).commit();
+//            AppCompatActivity appCompatActivity= (AppCompatActivity) view.getContext();
+//            SearchFragment fragment=new SearchFragment();
+//            Bundle bundle=new Bundle();
+//            fragment.setArguments(bundle);
+//
+//
+//            appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame,fragment).addToBackStack(null).commit();
 
 
         });
@@ -155,14 +112,9 @@ cetagoryRecycler();
         binding.txt.setOnClickListener(view -> {
 
 
-            AppCompatActivity appCompatActivity= (AppCompatActivity) view.getContext();
-            DetailsFragment fragment =new DetailsFragment();
-            Bundle bundle=new Bundle();
-            fragment.setArguments(bundle);
-
-
-            appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame,fragment).addToBackStack(null).commit();
-
+            Intent intent=new Intent(getContext(), ContenerActivity.class);
+            intent.putExtra("details",true);
+            getContext().startActivity(intent);
 
         });
 
@@ -229,4 +181,7 @@ cetagoryRecycler();
 
 
     }
+
+
+
 }
