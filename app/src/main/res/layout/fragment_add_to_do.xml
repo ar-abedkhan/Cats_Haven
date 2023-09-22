@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:id="@+id/t"
+android:background="@color/sky"
+        >
+
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:text="Add ToDO"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            >
+
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/abril_fatface"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:text="Save ToDo"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black_textColor"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/t"
+        android:id="@+id/ser1"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lay1"
+            android:paddingBottom="@dimen/_100sdp"
+            >
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/white"
+                android:id="@+id/v"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/todotitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/abhaya_libre_semibold"
+                android:hint="Todo Title Name"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_8sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/sky"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/_16sdp"
+                android:id="@+id/contener"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/todotitle"
+                >
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/datetime"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:weightSum="2"
+                    >
+
+
+
+
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/_120sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/abhaya_libre_semibold"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="12-08-22"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/sky"
+                    android:inputType="datetime"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/time"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/_120sdp"
+                    android:fontFamily="@font/abhaya_libre_semibold"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:hint="09-54 PM"
+                    android:textColorHint="@color/sky"
+                    android:inputType="time"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <RadioGroup
+                    app:layout_constraintTop_toBottomOf="@id/datetime"
+                    android:id="@+id/redioPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:background="#5C9DC4FD"
+                    android:weightSum="3"
+                    >
+                    <RadioButton
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/priorityHigh"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High"
+                        android:textColorHint="@color/sky"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        />
+                    <RadioButton
+                        android:id="@+id/PpriorityMedium"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textColorHint="@color/sky"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        />
+                    <RadioButton
+                        android:id="@+id/priorityLow"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Low"
+                        android:textColorHint="@color/sky"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        />
+
+                </RadioGroup>
+
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+            <EditText
+                android:id="@+id/todoDiscription"
+                app:layout_constraintTop_toBottomOf="@id/contener"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/abhaya_libre_semibold"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:hint="Todo Descripion"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_100sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/sky"
+                android:maxHeight="@dimen/_200sdp"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

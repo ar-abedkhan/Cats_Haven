@@ -13,4 +13,146 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <attr name="themecolor" format="color"/>
+
+
+
+    <style name="color1" parent="Theme.MaterialComponents.Light">
+
+        <item name="themecolor">@color/sky</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/sky</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/themecolor</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+
+
+    </style>
+
+
+
+
+    <style name="color2" parent="Theme.MaterialComponents.Light">
+
+        <item name="themecolor">@color/pink</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/themecolor</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+
+
+    </style>
+
+
+
+
+    <style name="color3" parent="Theme.MaterialComponents.Light">
+
+        <item name="themecolor">@color/purple_500</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/themecolor</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+
+
+    </style>
+
+
+
+
+    <style name="color4" parent="Theme.MaterialComponents.Light">
+
+        <item name="themecolor">@color/purple_700</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/themecolor</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+
+
+    </style>
+
+
+
+
+    <style name="color5" parent="Theme.MaterialComponents.Light">
+
+        <item name="themecolor">@color/teal_200</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/teal_200</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/themecolor</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+
+
+    </style>
+
+
+
+
+    <style name="color6" parent="Theme.MaterialComponents.Light">
+
+        <item name="themecolor">@color/black</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/themecolor</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

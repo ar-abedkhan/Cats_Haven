@@ -20,6 +20,8 @@ import com.abedkhan.catsshaven.Models.CatModel;
 import com.abedkhan.catsshaven.Models.CetagoryModels;
 import com.abedkhan.catsshaven.R;
 import com.abedkhan.catsshaven.databinding.FragmentHomeBinding;
+import com.bdtopcoder.smart_slider.SliderAdapter;
+import com.bdtopcoder.smart_slider.SliderItem;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -43,7 +45,6 @@ FragmentHomeBinding binding;
 
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -64,9 +65,13 @@ FragmentHomeBinding binding;
 
         sliderSetup();
 
-        allBreedsRecycler();
+//        allBreedsRecycler();
+//
+//        cetagoryRecycler();
+//
 
-        cetagoryRecycler();
+        onItemClicked();
+
 
 
 
@@ -85,103 +90,150 @@ FragmentHomeBinding binding;
         return binding.getRoot();
     }
 
+    private void onItemClicked() {
+
+
+
+//
+//        binding.foodSearch.setOnClickListener(view -> {
+////            Log.i("TAG", "onCreate:-----------------Main search ");
+//
+//            AppCompatActivity appCompatActivity = (AppCompatActivity) view.getContext();
+//            FoodSearchFragment fragment = new FoodSearchFragment();
+//            Bundle bundle = new Bundle();
+//            fragment.setArguments(bundle);
+//
+//            //  appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.contener, fragment).addToBackStack(null).commit();
+//            Intent intent = new Intent(MainActivity.this, ContenerActivity.class);
+//            intent.putExtra("foodsearch", true);
+//            startActivity(intent);
+//        });
+//
+//
+
+    }
+
     private void onClickSetup() {
 
 
 
 
-
-        binding.search.setOnClickListener(view -> {
-
-            Intent intent=new Intent(getContext(), ContenerActivity.class);
-            intent.putExtra("search",true);
-            getContext().startActivity(intent);
-
-//            AppCompatActivity appCompatActivity= (AppCompatActivity) view.getContext();
-//            SearchFragment fragment=new SearchFragment();
-//            Bundle bundle=new Bundle();
-//            fragment.setArguments(bundle);
+//
+//        binding.search.setOnClickListener(view -> {
+//
+//            Intent intent=new Intent(getContext(), ContenerActivity.class);
+//            intent.putExtra("search",true);
+//            getContext().startActivity(intent);
+//
+////            AppCompatActivity appCompatActivity= (AppCompatActivity) view.getContext();
+////            SearchFragment fragment=new SearchFragment();
+////            Bundle bundle=new Bundle();
+////            fragment.setArguments(bundle);
+////
+////
+////            appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame,fragment).addToBackStack(null).commit();
 //
 //
-//            appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame,fragment).addToBackStack(null).commit();
+//        });
+//
 
-
-        });
-
-
-        binding.txt.setOnClickListener(view -> {
+        binding.cat.setOnClickListener(view -> {
 
 
             Intent intent=new Intent(getContext(), ContenerActivity.class);
-            intent.putExtra("details",true);
-            getContext().startActivity(intent);
+            intent.putExtra("cat",true);
+            requireActivity().startActivity(intent);
 
         });
+//
 
+        binding.dog.setOnClickListener(view -> {
+
+
+            Intent intent=new Intent(getContext(), ContenerActivity.class);
+            intent.putExtra("dog",true);
+            requireActivity().startActivity(intent);
+
+        });
+//
 
 
 
     }
 
     private void sliderSetup() {
+     //   ViewPager2 viewPager2 = findViewById(R.id.smartSlider);
 
+        List<SliderItem> sliderItems = new ArrayList<>();
+        sliderItems.add(new SliderItem(R.drawable.cat,"image 1"));
+        sliderItems.add(new SliderItem(R.drawable.cat2,"Image 2"));
+        sliderItems.add(new SliderItem(R.drawable.catimg,"Image 3"));
+        sliderItems.add(new SliderItem(R.drawable.catimg2,"Image 3"));
+        sliderItems.add(new SliderItem(R.drawable.catimg3,"Image 3"));
+        sliderItems.add(new SliderItem(R.drawable.catimg,"Image 3"));
 
-        imageList = new ArrayList<>();
-        imageList.add(new SlideModel(R.drawable.cat,"Cat", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.cat2,"All Food", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.catimg,"Night", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.catimg2,"Burger", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.catimg3,"Mars", ScaleTypes.CENTER_CROP));
+        binding.smartSlider.setAdapter(new SliderAdapter(sliderItems,binding.smartSlider,5000));
 
+//        new SliderAdapter((position, title, view) -> {
+//            Toast.makeText(this, "Position: "+position+" Title: "+title, Toast.LENGTH_SHORT).show();
+//        });
 
-        binding.imgSlider.setImageList(imageList);
-
-
-    }
-
-    private void cetagoryRecycler() {
-
-        cetagoryModelsList.add(new CetagoryModels("Foods",R.drawable.cat));
-        cetagoryModelsList.add(new CetagoryModels("Reproduction",R.drawable.cat2));
-        cetagoryModelsList.add(new CetagoryModels("Medicine",R.drawable.catimg));
-        cetagoryModelsList.add(new CetagoryModels("Dises",R.drawable.catimg2));
-        cetagoryModelsList.add(new CetagoryModels("Game",R.drawable.catimg3));
-        cetagoryModelsList.add(new CetagoryModels("Take and care ",R.drawable.cat));
-        cetagoryModelsList.add(new CetagoryModels("Parsh",R.drawable.cat));
-
-
-        CetagoryAdapter adapter=new CetagoryAdapter(requireContext(),cetagoryModelsList);
-        binding.cetagoryRecycler.setAdapter(adapter);
-
-
-
+//        imageList = new ArrayList<>();
+//        imageList.add(new SlideModel(R.drawable.cat, ScaleTypes.CENTER_CROP));
+//        imageList.add(new SlideModel(R.drawable.cat2, ScaleTypes.CENTER_CROP));
+//        imageList.add(new SlideModel(R.drawable.catimg, ScaleTypes.CENTER_CROP));
+//        imageList.add(new SlideModel(R.drawable.catimg2, ScaleTypes.CENTER_CROP));
+//        imageList.add(new SlideModel(R.drawable.catimg3,"Mars", ScaleTypes.CENTER_CROP));
+//
+//
+//        binding.imgSlider.setImageList(imageList);
 
 
     }
 
-    private void allBreedsRecycler() {
-
-
-        catModels.add(new CatModel("Parsh",R.drawable.cat));
-        catModels.add(new CatModel("Parsh",R.drawable.catimg2));
-        catModels.add(new CatModel("Parsh",R.drawable.cat2));
-        catModels.add(new CatModel("Parsh",R.drawable.catimg));
-        catModels.add(new CatModel("Parsh",R.drawable.catimg3));
-        catModels.add(new CatModel("Parsh",R.drawable.cat));
-        catModels.add(new CatModel("Parsh",R.drawable.cat));
-        catModels.add(new CatModel("Parsh",R.drawable.catimg2));
-        catModels.add(new CatModel("Parsh",R.drawable.cat2));
-        catModels.add(new CatModel("Parsh",R.drawable.catimg));
-        catModels.add(new CatModel("Parsh",R.drawable.catimg3));
-        catModels.add(new CatModel("Parsh",R.drawable.cat));
-
-
-        CatAdapter adapter=new CatAdapter(getContext(),catModels);
-        binding.allBreedsRecycler.setAdapter(adapter);
-
-
-    }
-
+//    private void cetagoryRecycler() {
+//
+//        cetagoryModelsList.add(new CetagoryModels("Foods",R.drawable.cat));
+//        cetagoryModelsList.add(new CetagoryModels("Reproduction",R.drawable.cat2));
+//        cetagoryModelsList.add(new CetagoryModels("Medicine",R.drawable.catimg));
+//        cetagoryModelsList.add(new CetagoryModels("Dises",R.drawable.catimg2));
+//        cetagoryModelsList.add(new CetagoryModels("Game",R.drawable.catimg3));
+//        cetagoryModelsList.add(new CetagoryModels("Take and care ",R.drawable.cat));
+//        cetagoryModelsList.add(new CetagoryModels("Parsh",R.drawable.cat));
+//
+//
+//        CetagoryAdapter adapter=new CetagoryAdapter(requireContext(),cetagoryModelsList);
+//        binding.cetagoryRecycler.setAdapter(adapter);
+//
+//
+//
+//
+//
+//    }
+//
+//    private void allBreedsRecycler() {
+//
+//
+//        catModels.add(new CatModel("Deshi grid",R.drawable.cat));
+//        catModels.add(new CatModel("American parsh",R.drawable.catimg2));
+//        catModels.add(new CatModel("Parsh",R.drawable.cat2));
+//        catModels.add(new CatModel("Parsh",R.drawable.catimg));
+//        catModels.add(new CatModel("Parsh",R.drawable.catimg3));
+//        catModels.add(new CatModel("Parsh",R.drawable.cat));
+//        catModels.add(new CatModel("Cross parsh",R.drawable.cat));
+//        catModels.add(new CatModel("Parsh",R.drawable.catimg2));
+//        catModels.add(new CatModel("Parsh",R.drawable.cat2));
+//        catModels.add(new CatModel("Parsh",R.drawable.catimg));
+//        catModels.add(new CatModel("Parsh",R.drawable.catimg3));
+//        catModels.add(new CatModel("Parsh",R.drawable.cat));
+//
+//
+//        CatAdapter adapter=new CatAdapter(getContext(),catModels);
+//        binding.allBreedsRecycler.setAdapter(adapter);
+//
+//
+//    }
+//
 
 
 }

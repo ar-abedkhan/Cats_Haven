@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/add_bg"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_7sdp"
+    app:cardCornerRadius="@dimen/_15sdp"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_5sdp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imgCard"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/todoImage"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/cat"
+            android:background="@color/white"
+            />
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/_200sdp"
+        app:layout_constraintStart_toEndOf="@id/imgCard"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toDoTitle"
+        android:text="Bath"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/black_textColor"
+        android:fontFamily="@font/poppins_medium"
+        />
+
+
+<!--    prority set start-->
+
+
+
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:id="@+id/highPriority"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_baseline_circle_24"
+        app:tint="@color/green" />
+
+
+
+
+
+<!--    <ImageView-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_width="@dimen/_10sdp"-->
+<!--        android:layout_height="@dimen/_10sdp"-->
+<!--        android:id="@+id/mediumPriority"-->
+<!--        android:layout_marginTop="@dimen/_8sdp"-->
+<!--        android:layout_marginEnd="@dimen/_4sdp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:src="@drawable/ic_baseline_circle_24"-->
+<!--        app:tint="#2E49DC"-->
+<!--        />-->
+
+
+
+
+
+
+
+
+<!--    <ImageView-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_width="@dimen/_10sdp"-->
+<!--        android:layout_height="@dimen/_10sdp"-->
+<!--        android:id="@+id/lowPriority"-->
+<!--        android:layout_marginTop="@dimen/_8sdp"-->
+<!--        android:layout_marginEnd="@dimen/_4sdp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:src="@drawable/ic_baseline_circle_24"-->
+<!--        app:tint="#EC3B03"-->
+<!--        />-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--    prority set end-->
+
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgCard"
+        app:layout_constraintTop_toBottomOf="@id/toDoTitle"
+        android:id="@+id/toDoTime"
+        android:text="10:20 pm"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/statusDone"
+        android:text="Done"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/green"
+        android:fontFamily="@font/poppins_medium"
+        />
+
+
+
+
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:id="@+id/statusUnDone"-->
+<!--        android:text="UnDone"-->
+<!--        android:textStyle="bold"-->
+<!--        android:includeFontPadding="false"-->
+<!--        android:layout_marginEnd="@dimen/_6sdp"-->
+<!--        android:textSize="@dimen/_16sdp"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:fontFamily="@font/poppins_medium"-->
+<!--        />-->
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

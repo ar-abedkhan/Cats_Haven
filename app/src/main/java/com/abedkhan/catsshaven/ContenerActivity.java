@@ -7,7 +7,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.abedkhan.catsshaven.Fragment.AddToDoFragment;
+import com.abedkhan.catsshaven.Fragment.CatFragment;
 import com.abedkhan.catsshaven.Fragment.DetailsFragment;
+import com.abedkhan.catsshaven.Fragment.DogFragment;
+import com.abedkhan.catsshaven.Fragment.HomeFragment;
 import com.abedkhan.catsshaven.Fragment.SearchFragment;
 import com.abedkhan.catsshaven.databinding.ActivityContenerBinding;
 
@@ -23,11 +27,17 @@ Intent intent;
 
         intent=getIntent();
 
-        if (intent.getBooleanExtra("search", false)){
-            replace(new SearchFragment());
+        if (intent.getBooleanExtra("cat", false)){
+            replace(new CatFragment());
 
-        } else if (intent.getBooleanExtra("details",false)) {
-            replace(new DetailsFragment());
+        } else if (intent.getBooleanExtra("dog",false)) {
+            replace(new DogFragment());
+
+        } else if (intent.getBooleanExtra("addtodo", false)) {
+            replace(new AddToDoFragment());
+
+        }else if (intent.getBooleanExtra("home",false)){
+            replace(new HomeFragment());
 
         }
 

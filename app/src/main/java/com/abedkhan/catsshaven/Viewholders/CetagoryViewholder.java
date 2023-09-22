@@ -18,8 +18,8 @@ public class CetagoryViewholder extends RecyclerView.ViewHolder {
         super(itemView);
 
 
-        name=itemView.findViewById(R.id.catName);
-        img=itemView.findViewById(R.id.catimg);
+        name=itemView.findViewById(R.id.cetegoryName);
+        img=itemView.findViewById(R.id.categeryImg);
 
 
 
