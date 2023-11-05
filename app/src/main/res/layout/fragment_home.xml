@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white_background"
+        android:background="@color/white"
         >
 
 
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             android:orientation="horizontal"
-            android:background="@color/white"
+            android:background="@color/sky"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/tool"
             >
@@ -47,7 +47,7 @@
                 android:fontFamily="@font/abril_fatface"
                 android:gravity="center"
                 android:text="Cats Haven"
-                android:textColor="@color/sky"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_22sdp"
                 app:layout_constraintStart_toEndOf="@id/icon"
                 app:layout_constraintBottom_toBottomOf="parent"

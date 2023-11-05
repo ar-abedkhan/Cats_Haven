@@ -4,7 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment.DogFragment">
+    tools:context=".Fragment.DogHomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -70,12 +74,14 @@
             app:layout_constraintTop_toBottomOf="@id/tool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             >
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 >
 
 

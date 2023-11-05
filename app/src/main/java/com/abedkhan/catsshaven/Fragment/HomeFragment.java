@@ -151,7 +151,7 @@ FragmentHomeBinding binding;
 
 
             Intent intent=new Intent(getContext(), ContenerActivity.class);
-            intent.putExtra("dog",true);
+            intent.putExtra("Dog",true);
             requireActivity().startActivity(intent);
 
         });

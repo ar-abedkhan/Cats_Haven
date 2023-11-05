@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.abedkhan.catsshaven.Adapters.TodoAdapter;
 import com.abedkhan.catsshaven.ContenerActivity;
+import com.abedkhan.catsshaven.MainActivity;
 import com.abedkhan.catsshaven.Models.ToDoModel;
 import com.abedkhan.catsshaven.R;
 import com.abedkhan.catsshaven.databinding.FragmentToDoBinding;
@@ -47,8 +48,8 @@ binding.addTodo.setOnClickListener(view -> {
 
 binding.backBtn.setOnClickListener(view -> {
 
-    Intent intent=new Intent(getContext(), ContenerActivity.class);
-    intent.putExtra("home",true);
+    Intent intent=new Intent(getContext(), MainActivity.class);
+   // intent.putExtra("home",true);
     getContext().startActivity(intent);
 });
 
