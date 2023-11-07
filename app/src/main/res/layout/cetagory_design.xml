@@ -30,7 +30,7 @@
     >
 
     <ImageView
-        android:id="@+id/catimg"
+        android:id="@+id/breedImg"
         android:layout_width="@dimen/_120sdp"
         android:layout_height="@dimen/_80sdp"
         app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
@@ -47,7 +47,7 @@
 
 <TextView
     app:layout_constraintTop_toBottomOf="@id/imgCard"
-    android:id="@+id/catName"
+    android:id="@+id/breedName"
     android:ellipsize="marquee"
     android:singleLine="true"
     android:gravity="center"
