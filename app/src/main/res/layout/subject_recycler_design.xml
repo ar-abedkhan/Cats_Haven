@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cat"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_10sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="@dimen/_5sdp"
+    >
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_8ssp"
+            android:layout_marginEnd="@dimen/_8ssp"
+            android:layout_marginTop="@dimen/_8ssp"
+            >
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/_8ssp"
+                android:id="@+id/imgCard"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+android:id="@+id/subjectImg"
+                    app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                    android:src="@drawable/catimg"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/imgCard"
+                android:id="@+id/subjectName"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_4sdp"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="@dimen/_4sdp"
+                android:text="All About CAT'S"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/black" />
+
+
+
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/subjectName"
+                android:id="@+id/subjectDes"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_4sdp"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="@dimen/_4sdp"
+                android:text="A cat usually expresses love to their owners by making a sound or rolling on the floor."
+                android:textAlignment="center"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

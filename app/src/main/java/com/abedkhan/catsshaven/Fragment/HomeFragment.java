@@ -15,9 +15,11 @@ import android.view.ViewGroup;
 
 import com.abedkhan.catsshaven.Adapters.CatAdapter;
 import com.abedkhan.catsshaven.Adapters.CetagoryAdapter;
+import com.abedkhan.catsshaven.Adapters.SubjectAdapter;
 import com.abedkhan.catsshaven.ContenerActivity;
 import com.abedkhan.catsshaven.Models.CatModel;
 import com.abedkhan.catsshaven.Models.CetagoryModels;
+import com.abedkhan.catsshaven.Models.SubjectModel;
 import com.abedkhan.catsshaven.R;
 import com.abedkhan.catsshaven.databinding.FragmentHomeBinding;
 import com.bdtopcoder.smart_slider.SliderAdapter;
@@ -42,6 +44,7 @@ FragmentHomeBinding binding;
     ArrayList<SlideModel> imageList;
     List<CatModel> catModels=new ArrayList<>();
     List<CetagoryModels>cetagoryModelsList=new ArrayList<>();
+    List<SubjectModel>subjectModelList=new ArrayList<>();
 
 
 
@@ -76,9 +79,12 @@ FragmentHomeBinding binding;
 
 
 
+subjectModelList.add(new SubjectModel("All About Cats","A cat usually expresses love to their owners by making a sound or rolling on the floor.",1,R.drawable.catimg));
+subjectModelList.add(new SubjectModel("All About Pets","The loyalty of dog makes it a “man’s best friend”",2,R.drawable.dog));
+subjectModelList.add(new SubjectModel("All About Birds","A cat usually expresses love to their owners by making a sound or rolling on the floor.",3,R.drawable.bird));
 
-
-
+        SubjectAdapter subjectAdapter=new SubjectAdapter(requireContext(),subjectModelList);
+        binding.subjectRecycler.setAdapter(subjectAdapter);
 
 
 
@@ -137,26 +143,26 @@ FragmentHomeBinding binding;
 //        });
 //
 
-        binding.cat.setOnClickListener(view -> {
-
-
-            Intent intent=new Intent(getContext(), ContenerActivity.class);
-            intent.putExtra("cat",true);
-            requireActivity().startActivity(intent);
-
-        });
+//        binding.cat.setOnClickListener(view -> {
 //
-
-        binding.dog.setOnClickListener(view -> {
-
-
-            Intent intent=new Intent(getContext(), ContenerActivity.class);
-            intent.putExtra("Dog",true);
-            requireActivity().startActivity(intent);
-
-        });
 //
-
+//            Intent intent=new Intent(getContext(), ContenerActivity.class);
+//            intent.putExtra("cat",true);
+//            requireActivity().startActivity(intent);
+//
+//        });
+////
+//
+//        binding.dog.setOnClickListener(view -> {
+//
+//
+//            Intent intent=new Intent(getContext(), ContenerActivity.class);
+//            intent.putExtra("Dog",true);
+//            requireActivity().startActivity(intent);
+//
+//        });
+////
+//
 
 
     }

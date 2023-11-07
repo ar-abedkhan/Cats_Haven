@@ -8,7 +8,6 @@ import android.os.Bundle;
 
 import com.abedkhan.catsshaven.Fragment.AddToDoFragment;
 import com.abedkhan.catsshaven.Fragment.CatFragment;
-import com.abedkhan.catsshaven.Fragment.DogHomeFragment;
 import com.abedkhan.catsshaven.databinding.ActivityContenerBinding;
 
 public class ContenerActivity extends AppCompatActivity {
@@ -25,9 +24,6 @@ Intent intent;
 
         if (intent.getBooleanExtra("cat", false)){
             replace(new CatFragment());
-
-        }else if (intent.getBooleanExtra("Dog",false)) {
-            replace(new DogHomeFragment());
 
         }else if (intent.getBooleanExtra("addtodo", false)) {
             replace(new AddToDoFragment());
