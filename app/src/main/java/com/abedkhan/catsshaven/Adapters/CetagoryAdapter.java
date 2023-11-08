@@ -1,6 +1,7 @@
 package com.abedkhan.catsshaven.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.abedkhan.catsshaven.ContenerActivity;
 import com.abedkhan.catsshaven.Models.CatModel;
 import com.abedkhan.catsshaven.Models.CetagoryModels;
 import com.abedkhan.catsshaven.R;
@@ -42,6 +44,12 @@ public class CetagoryAdapter extends RecyclerView.Adapter<CetagoryViewholder> {
         holder.name.setText(catModel.getCetagoryname());
 
         Glide.with(context).load(catModel.getCetagoryImg()).into(holder.img);
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent=new Intent(context, ContenerActivity.class);
+            intent.putExtra("details",true);
+            context.startActivity(intent);
+        });
     }
 
     @Override

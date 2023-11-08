@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.abedkhan.catsshaven.Fragment.AddToDoFragment;
 import com.abedkhan.catsshaven.Fragment.CatFragment;
+import com.abedkhan.catsshaven.Fragment.DetailsFragment;
 import com.abedkhan.catsshaven.databinding.ActivityContenerBinding;
 
 public class ContenerActivity extends AppCompatActivity {
@@ -29,10 +30,10 @@ Intent intent;
             replace(new AddToDoFragment());
 
         }
-//        else if (intent.getBooleanExtra("home",false)){
-//            replace(new HomeFragment());
-//
-//        }
+        else if (intent.getBooleanExtra("details",false)){
+            replace(new DetailsFragment());
+
+        }
 
 
 

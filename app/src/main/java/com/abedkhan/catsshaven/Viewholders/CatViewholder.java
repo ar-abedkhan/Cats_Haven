@@ -9,16 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.abedkhan.catsshaven.R;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class CatViewholder extends RecyclerView.ViewHolder {
     public TextView name;
-    public ImageView img;
+    public CircleImageView img;
 
 
     public CatViewholder(@NonNull View itemView) {
         super(itemView);
 
-        name=itemView.findViewById(R.id.catName);
-        img=itemView.findViewById(R.id.catimg);
+        name=itemView.findViewById(R.id.cetegoryName);
+        img=itemView.findViewById(R.id.categeryImg);
 
     }
 }

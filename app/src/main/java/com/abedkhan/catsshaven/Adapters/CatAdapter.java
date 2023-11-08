@@ -1,6 +1,7 @@
 package com.abedkhan.catsshaven.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.abedkhan.catsshaven.ContenerActivity;
 import com.abedkhan.catsshaven.Models.CatModel;
 import com.abedkhan.catsshaven.R;
 import com.abedkhan.catsshaven.Viewholders.CatViewholder;
@@ -35,9 +37,25 @@ public class CatAdapter extends RecyclerView.Adapter<CatViewholder> {
     public void onBindViewHolder(@NonNull CatViewholder holder, int position) {
     CatModel catModel=catModels.get(position);
 
-    holder.name.setText(catModel.getName());
+    try {
+        holder.name.setText(catModel.getName());
+
+    }catch (Exception e){
+        holder.name.setText(catModel.getName());
+
+    }
 
         Glide.with(context).load(catModel.getImg()).into(holder.img);
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent=new Intent(context, ContenerActivity.class);
+            intent.putExtra("details",true);
+            context.startActivity(intent);
+        });
+
+
+
+
     }
 
     @Override
