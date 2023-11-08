@@ -32,7 +32,7 @@ public class CetagoryAdapter extends RecyclerView.Adapter<CetagoryViewholder> {
     @NonNull
     @Override
     public CetagoryViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.cat_recycler_design,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.cetagory_design,parent,false);
 
         return new CetagoryViewholder(view);
     }

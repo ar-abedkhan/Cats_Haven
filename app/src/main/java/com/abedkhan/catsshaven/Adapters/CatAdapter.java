@@ -29,7 +29,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatViewholder> {
     @NonNull
     @Override
     public CatViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.cetagory_design,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.breed_recycler_design,parent,false);
         return new CatViewholder(view);
     }
 
@@ -37,13 +37,10 @@ public class CatAdapter extends RecyclerView.Adapter<CatViewholder> {
     public void onBindViewHolder(@NonNull CatViewholder holder, int position) {
     CatModel catModel=catModels.get(position);
 
-    try {
+
         holder.name.setText(catModel.getName());
 
-    }catch (Exception e){
-        holder.name.setText(catModel.getName());
 
-    }
 
         Glide.with(context).load(catModel.getImg()).into(holder.img);
 

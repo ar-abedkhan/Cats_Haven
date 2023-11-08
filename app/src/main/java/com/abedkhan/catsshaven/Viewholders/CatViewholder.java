@@ -13,14 +13,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CatViewholder extends RecyclerView.ViewHolder {
     public TextView name;
-    public CircleImageView img;
+    public ImageView img;
 
 
     public CatViewholder(@NonNull View itemView) {
         super(itemView);
 
-        name=itemView.findViewById(R.id.cetegoryName);
-        img=itemView.findViewById(R.id.categeryImg);
+        name=itemView.findViewById(R.id.breedName);
+        img=itemView.findViewById(R.id.breedImg);
 
     }
 }
