@@ -60,6 +60,10 @@ binding.theme.setOnClickListener(view -> {
 
 
 
+binding.moreApps.setOnClickListener(view -> {
+
+});
+
 
 
 
